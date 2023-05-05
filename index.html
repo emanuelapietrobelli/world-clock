@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock by Emanuela Pietrobelli</title>
   </head>
   <body>
@@ -18,16 +20,16 @@
         <option value="">Mexico City 🇲🇽</option>
       </select>
 
-      <div class="cities">
+      <div class="cities" id="rio-de-janeiro">
         <div>
-          <h2>Tokio 🇯🇵</h2>
-          <div class="date">Mai 3th 2023</div>
+          <h2>Rio de Janeiro 🇧🇷</h2>
+          <div class="date"></div>
         </div>
-        <div class="time">11:44:15 <small>AM</small></div>
+        <div class="time"></div>
       </div>
-      <div class="cities">
+      <div class="cities" id="porto">
         <div>
-          <h2>Tokio 🇯🇵</h2>
+          <h2>Porto 🇵🇹</h2>
           <div class="date">Mai 3th 2023</div>
         </div>
         <div class="time">11:44:15 <small>AM</small></div>
