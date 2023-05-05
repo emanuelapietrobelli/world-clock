@@ -43,6 +43,7 @@ function updateCity(event) {
     </div>`;
 
   if (cityTimeZone === "replace") {
+    citiesElement.innerHTML = "";
     location.reload();
   }
 }
