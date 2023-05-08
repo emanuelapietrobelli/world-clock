@@ -1,23 +1,27 @@
 body {
-  background-color: rgb(235, 125, 166, 0.7);
-  font-family: sans-serif;
-  color: rgb(42, 73, 211);
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  background: rgb(28, 0, 255);
 }
 
-h1 {
-  text-align: left;
-  font-size: 36px;
-  margin: 0;
+.logo {
+  width: 393px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 h2 {
   margin: 0 0 5px;
-  font-size: 32px;
+  font-size: 37px;
+  font-style: normal;
 }
 .container {
   max-width: 600px;
-  background-color: rgb(253, 250, 222);
-
+  background-color: rgb(28, 0, 255);
   margin: 120px auto;
   padding: 40px;
   border-radius: 10px;
@@ -28,11 +32,17 @@ select {
   width: 100%;
   padding: 16px;
   font-size: 16px;
-  border-radius: 5px;
-  background-color: rgb(253, 250, 222, 0.5);
-  border-color: rgb(42, 73, 211, 0.4);
-  color: rgb(42, 73, 211, 0.8);
+  border-radius: 32px;
+  background-color: rgb(28, 0, 255);
+  border-color: white;
+  color: white;
   margin: 40px 0px 30px 0px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  appearance: none;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/080/979/original/arrow.png?1683542530");
+  background-repeat: no-repeat;
+  background-position: right 1rem top 50%;
+  background-size: 0.65rem auto;
 }
 
 .cities {
@@ -40,7 +50,11 @@ select {
   justify-content: space-between;
   align-items: center;
   padding: 30px 0px;
-  border-bottom: 1px dashed rgb(42, 73, 211, 0.4);
+  border-bottom: 1px dashed rgb(255, 255, 255);
+}
+
+.cities small {
+  vertical-align: baseline;
 }
 .cities:last-child {
   border: none;
@@ -48,12 +62,13 @@ select {
 
 .date {
   font-size: 15px;
-  color: rgb(42, 73, 211, 0.8);
 }
 
 .time {
   font-size: 48px;
   font-weight: 600;
+  font-family: "Bodoni Moda", serif;
+  font-family: "Inter", sans-serif;
 }
 
 .time small {
@@ -62,8 +77,20 @@ select {
   vertical-align: middle;
 }
 
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: rgb(212, 0, 255);
+}
+
 footer {
   text-align: center;
   font-size: 12px;
-  color: rgb(21, 47, 195);
+  font-family: sans-serif;
 }

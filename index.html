@@ -4,46 +4,71 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Inter:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock by Emanuela Pietrobelli</title>
   </head>
-  <body>
-    <div class="container">
-      <h1>World Clocks</h1>
-
-      <select id="city">
-        <option value="replace">Select a city</option>
-        <option value="current">My currently location</option>
-        <option value="America/Argentina/Buenos_Aires">Buenos Aires 🇦🇷</option>
-        <option value="Europe/Malta">Valletta 🇲🇹</option>
-        <option value="Africa/Sao_Tome">São Tomé 🇸🇹</option>
-        <option value="Pacific/Tahiti">Tahiti 🇵🇫</option>
-      </select>
-
-      <div id="cities">
-        <div class="cities" id="rio-de-janeiro">
-          <div>
-            <h2>Rio de Janeiro 🇧🇷</h2>
-            <div class="date"></div>
+  
+    <body>
+     
+      <div class="container">
+<img src="img/logo_clock.png" class="logo">
+        
+        <select class="round" id="city">
+          <option value="replace">Select a city</option>
+          <option value="current">My currently location</option>
+          <option value="America/Buenos_Aires">Buenos Aires 🇦🇷</option>
+          <option value="Europe/Malta">Malta 🇲🇹</option>
+          <option value="Africa/Sao_Tome">São Tomé 🇸🇹</option>
+          <option value="Pacific/Tahiti">Tahiti 🇵🇫</option>
+        </select>
+        
+        <div id="cities">
+          
+          <div class="cities" id="porto">
+            <div>
+              <h2>Porto <small>🇵🇹</small></h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
           </div>
-          <div class="time"></div>
-        </div>
-        <div class="cities" id="porto">
-          <div>
-            <h2>Porto 🇵🇹</h2>
-            <div class="date">Mai 3th 2023</div>
+          <div class="cities" id="rio-de-janeiro">
+            <div>
+              <h2>Rio de Janeiro <small>🇧🇷</small></h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
           </div>
-          <div class="time">11:44:15 <small>AM</small></div>
+            <div class="cities" id="porto">
+            <div>
+              <h2>Tokyo <small>🇯🇵</small></h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
+          </div>
+          <div class="cities" id="porto">
+            <div>
+              <h2>Sydney <small>🇦🇺</small></h2>
+              <div class="date"></div>
+            </div>
+            <div class="time"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </body>
-  <footer>
-    This project was coded with ❤️ by Emanuela Pietrobelli and is open-sourced
-    on
-    <a href="https://github.com/emanuelapietrobelli/world-clock">GitHub</a>
-  </footer>
+     
+    </body>
+
+    <footer>
+      This project was coded with ❤️ by Emanuela Pietrobelli and is open-sourced
+      on
+      <a href="https://github.com/emanuelapietrobelli/world-clock">GitHub</a>
+    </footer>
+  </section>
   <script src="javascript/index.js"></script>
 </html>
