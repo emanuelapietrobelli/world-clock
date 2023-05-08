@@ -1,30 +1,37 @@
-function updateTime() {
+setInterval(function () {
   // Rio de Janeiro
-  let rioDeJaneiroElement = document.querySelector("#rio-de-janeiro");
-  if (rioDeJaneiroElement) {
-    let rioDeJaneiroDateElement = rioDeJaneiroElement.querySelector(".date");
-    let rioDeJaneiroTimeElement = rioDeJaneiroElement.querySelector(".time");
-    let rioDeJaneiroTime = moment().tz(`America/Sao_Paulo`);
-
-    rioDeJaneiroDateElement.innerHTML = rioDeJaneiroTime.format(`MMMM Do YYYY`);
-    rioDeJaneiroTimeElement.innerHTML = rioDeJaneiroTime.format(
-      `h:mm:ss [<small>]A[</small>]`
-    );
-  }
+  let rioDeJaneiro = document.getElementById("rio-de-janeiro");
+  let rioDeJaneiroTime = moment().tz(`America/Sao_Paulo`);
+  rioDeJaneiro.querySelector(".date").innerHTML =
+    rioDeJaneiroTime.format(`MMMM Do YYYY`);
+  rioDeJaneiro.querySelector(".time").innerHTML = rioDeJaneiroTime.format(
+    `h:mm:ss [<small>]A[</small>]`
+  );
 
   // Porto
-  let portoElement = document.querySelector("#porto");
-  if (portoElement) {
-    let portoDateElement = portoElement.querySelector(".date");
-    let portoTimeElement = portoElement.querySelector(".time");
-    let portoTime = moment().tz(`Europe/Lisbon`);
+  let porto = document.getElementById("porto");
+  let portoTime = moment().tz(`Europe/Lisbon`);
+  porto.querySelector(".date").innerHTML = portoTime.format(`MMMM Do YYYY`);
+  porto.querySelector(".time").innerHTML = portoTime.format(
+    `h:mm:ss [<small>]A[</small>]`
+  );
 
-    portoDateElement.innerHTML = portoTime.format(`MMMM Do YYYY`);
-    portoTimeElement.innerHTML = portoTime.format(
-      `h:mm:ss [<small>]A[</small>]`
-    );
-  }
-}
+  // tokyo
+  let tokyo = document.getElementById("tokyo");
+  let tokyoTime = moment().tz(`Asia/Tokyo`);
+  tokyo.querySelector(".date").innerHTML = tokyoTime.format(`MMMM Do YYYY`);
+  tokyo.querySelector(".time").innerHTML = tokyoTime.format(
+    `h:mm:ss [<small>]A[</small>]`
+  );
+
+  //sydney
+  let sydney = document.getElementById("sydney");
+  let sydneyTime = moment().tz("Australia/Sydney");
+  sydney.querySelector(".date").innerHTML = sydneyTime.format("MMMM Do YYYY");
+  sydney.querySelector(".time").innerHTML = sydneyTime.format(
+    `h:mm:ss [<small>]A[</small>]`
+  );
+}, 1000);
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
@@ -53,9 +60,6 @@ function updateCity(event) {
     location.reload();
   }
 }
-
-updateTime();
-setInterval(updateTime, 1000);
 
 let citySelectElement = document.querySelector("#city");
 citySelectElement.addEventListener("change", updateCity);
